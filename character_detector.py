@@ -11,7 +11,7 @@ def detect(image):
 		bounding boxes of detected elements
 	"""
 	# resize image to a fixed dimension
-	img = cv2.resize(image, (500,500))
+	img = cv2.resize(image, (900,500))
 
 	# convert the image to grayscale
 	gray_image = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
