@@ -34,7 +34,8 @@ def detect(image):
 			x, y, w, h = cv2.boundingRect(cnt)
 			# save coordinates
 			coordinates.append((x,y))
-			# save cropped image
-			cropped_images.append(255 - img[y:y + h, x:x + w])
+			# normalize and save cropped image
+			normalized = (255 - gray_image[y:y + h, x:x + w]) / 255
+			cropped_images.append(normalized)
 
 	return coordinates, cropped_images
