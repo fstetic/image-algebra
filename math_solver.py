@@ -54,8 +54,8 @@ def rpn(equation):
 	elements = equation.split(' ')
 
 	# because of the fixed minimal size of characters it can happen that equation hasn't got operators
-	if operators[0] not in elements or operators[1] not in elements or \
-		operators[2] not in elements or operators[3] not in elements:
+	if operators[0] not in elements and operators[1] not in elements and \
+		operators[2] not in elements and operators[3] not in elements:
 		raise_error("No operators")
 
 	# look if expression ends in an operator
