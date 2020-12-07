@@ -81,7 +81,7 @@ def rpn(equation):
 				top_operand = operator_stack.pop()
 		else:
 			if e not in operators:
-				raise_error("Unsupported character", equation)
+				raise_error("Unsupported character")
 			# while there are more important operands on stack, add them before current
 			while operator_stack and precedence[operator_stack[-1]] >= precedence[e] and operator_stack[-1] != '(':
 				postfix_result.append(operator_stack.pop())
@@ -91,7 +91,7 @@ def rpn(equation):
 	while operator_stack:
 		# if there are brackets at this point it means some were not opened or closed
 		if '(' in operator_stack or ')' in operator_stack:
-			raise_error("Missing brackets", equation)
+			raise_error("Missing brackets")
 		postfix_result.append(operator_stack.pop())
 
 	return postfix_result
@@ -130,13 +130,10 @@ def shunting_yard(elements):
 	return operand_stack.pop()
 
 
-def raise_error(message, equation):
+def raise_error(message):
 	"""
-	Raises error and exits execution
+	Raises exception in case of wrong equation
 	:param message: string
 		message to display
-	:param equation: string
-		equation in which the error occurred
 	"""
-	print(message,"in equation", equation, file=sys.stderr)
-	exit(1)
+	raise Exception(message)
