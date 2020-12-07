@@ -48,7 +48,7 @@ def rpn(equation):
 	:return: list
 		rpn of equation
 	"""
-	precedence = {'+':3, '-':3, '*':2, '/':2, '(':1}    # needed to respect the order of operations
+	precedence = {'+':1, '-':1, '*':2, '/':2, '(':3}    # needed to respect the order of operations
 	operators = ['+','-','*','/']   # needed for error handling
 	operator_stack, postfix_result = list(), list()
 	elements = equation.split(' ')
@@ -83,7 +83,7 @@ def rpn(equation):
 			if e not in operators:
 				raise_error("Unsupported character", equation)
 			# while there are more important operands on stack, add them before current
-			while operator_stack and precedence[operator_stack[-1]] >= precedence[e]:
+			while operator_stack and precedence[operator_stack[-1]] >= precedence[e] and operator_stack[-1] != '(':
 				postfix_result.append(operator_stack.pop())
 			operator_stack.append(e)
 
