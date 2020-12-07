@@ -63,12 +63,12 @@ def train_classifier(X,y):
 	              metrics=['accuracy'])
 
 	# train it
-	model.fit(X_train, y_train, epochs=2)   # loss: 0.052, acc: 0.9854
+	model.fit(X_train, y_train, epochs=2)
 
 	# calculate loss and accuracy
 	val_loss, val_acc = model.evaluate(X_test, y_test)
-	print("validate loss: ", val_loss)  # 0.052
-	print("validate acc: ", val_acc)    # 0.9854
+	print("validate loss: ", val_loss)
+	print("validate acc: ", val_acc)
 
 	# save it in directory named 'model'
 	model.save('model')
