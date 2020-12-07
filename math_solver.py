@@ -59,7 +59,7 @@ def rpn(equation):
 		if e.isdigit():
 			# if there's an operator after the last digit
 			if found_operator:
-				raise_error("Unterminated expression", equation)
+				raise_error("Unterminated expression")
 			else:
 				break
 		elif e in operators:

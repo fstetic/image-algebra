@@ -158,3 +158,17 @@ def get_label_for_integer(integer):
 		return ")"
 	else:
 		return
+
+
+def train():
+	"""
+	Helper function for training model
+	Loads dataset, trains classifier and saves it in 'model' directory
+	"""
+	X, y = load_dataset('dataset/')
+	train_classifier(X, y)
+
+
+# to train new model run this script
+if __name__ == '__main__':
+	train()
