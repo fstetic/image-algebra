@@ -17,7 +17,7 @@ function getResult(image){
 	let formData = new FormData()
 	// https://stackoverflow.com/questions/45830815/is-there-a-built-in-function-to-extract-image-data-from-data-uri
 	// removing data:[<media type>][;base64],
-	let base64Image = image.replace(/^data:image\/(png|jpg);base64,/, '')
+	let base64Image = image.replace(/^data:image\/(png|jpg|jpeg);base64,/, '')
 	formData.append('img', base64Image)
 	$.ajax({
 		url: '/script',

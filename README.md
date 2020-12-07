@@ -35,5 +35,5 @@ App works reasonably well for really pretty and clean inputs. I wouldn't recomme
 it for real life usage, but it's a great project for learning Computer Vision.
 
 ### Dataset links
-Full dataset: https://www.kaggle.com/xainano/handwrittenmathsymbols\
+Full dataset: https://www.kaggle.com/xainano/handwrittenmathsymbols \
 Dataset subset: https://drive.google.com/file/d/1g-BnJr-QiftCtWW_s4itgrCyfE7hsieD/view?usp=sharing
