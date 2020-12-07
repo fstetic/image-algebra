@@ -1,0 +1,34 @@
+body {
+	background-color: PaleTurquoise;
+}
+
+h1 {
+	text-align: center;
+	margin-top: 2%;
+	color: dodgerblue;
+	font-size: 36px;
+	font-family: sans-serif;
+}
+
+p {
+	text-align: center;
+	color: dodgerblue;
+	font-size: 24px;
+	font-family: sans-serif;
+}
+
+div {
+	text-align: center;
+	margin-top: 2%;
+}
+
+label{
+	color: dodgerblue;
+	font-size: 24px;
+	font-family: sans-serif;
+}
+
+input[type=file]{
+	padding:10px;
+	background:dodgerblue;
+}

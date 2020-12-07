@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+<script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<head>
+	<meta charset="UTF-8">
+	<title>Image algebra</title>
+</head>
+<body>
+<h1>Image algebra</h1>
+<p>Upload a picture of a simple equation</p>
+<div>
+	<img id="img" src="http://via.placeholder.com/500/87CEEB/1E90FF" alt="Uploaded image" width="500" height="500"/>
+</div>
+<div>
+	<input type='file' onchange="readURL(this);" />
+</div>
+<div>
+	<label id="label"></label>
+</div>
+</body>
+</html>
