@@ -3,4 +3,4 @@ keras
 opencv-python-headless
 numpy
 gunicorn
-sckit-learn
+sklearn
