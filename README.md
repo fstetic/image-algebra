@@ -27,12 +27,14 @@ and postfix expression solved using Shunting-yard algorithm
 #### Web app
 You can check out the app: https://image-algebra.herokuapp.com/ \
 You can also download the whole repository and change what you like. \
-To run the app locally just run main.py, to train a different model 
+To run the app locally just run `main.py`, to train a different model 
 change configuration in `character_classifier.py` and then run it.
 
 ### Conclusion
-App works reasonably well for really pretty and clean inputs. I wouldn't recommend
-it for real life usage, but it's a great project for learning Computer Vision.
+App works reasonably well for really pretty and clean inputs. Even though the model has high accuracy,
+if the image has some noise, detection will pick it up and find wrong characters. Some better image 
+preprocessing is needed to reduce noise. I wouldn't recommend it for real life usage, but it's a 
+great project for learning Computer Vision.
 
 ### Dataset links
 Full dataset: https://www.kaggle.com/xainano/handwrittenmathsymbols \
