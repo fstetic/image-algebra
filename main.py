@@ -62,3 +62,7 @@ def solve_equation():
 
 	# send back result and classified equation
 	return {'e':equation, 'r':result}
+
+
+if __name__ == '__main__':
+	app.run(debug=False)
