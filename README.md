@@ -25,10 +25,10 @@ and postfix expression solved using Shunting-yard algorithm
 
 ### Usage
 #### Web app
-You can check out the app: < link > \
-You can also download the whole repository and change what you like. To train
-the model differently change configuration in `character_classifier.py` and then
-run it.
+You can check out the app: https://image-algebra.herokuapp.com/ \
+You can also download the whole repository and change what you like. \
+To run the app locally just run main.py, to train a different model 
+change configuration in `character_classifier.py` and then run it.
 
 ### Conclusion
 App works reasonably well for really pretty and clean inputs. I wouldn't recommend
