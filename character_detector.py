@@ -47,17 +47,15 @@ def detect(image):
 				# apply padding with constant color of minimal pixel value
 				padded = cv2.copyMakeBorder(normalized, int((w - h) / 2), int((w - h) / 2), 0, 0,
 				                            borderType=cv2.BORDER_CONSTANT, value=np.min(normalized))
-
-				# erode picture because dataset images are much thinner
-				eroded = cv2.morphologyEx(padded, cv2.MORPH_ERODE, np.ones(shape=(2, 2)), iterations=3)
-
-				# resize
-				resized = cv2.resize(eroded, (30, 30), interpolation=cv2.INTER_AREA)
 			else:
 				padded = cv2.copyMakeBorder(normalized, 0, 0, int((h - w) / 2), int((h - w) / 2),
 				                            borderType=cv2.BORDER_CONSTANT, value=np.min(normalized))
-				eroded = cv2.morphologyEx(padded, cv2.MORPH_ERODE, np.ones(shape=(2, 2)), iterations=3)
-				resized = cv2.resize(eroded, (30, 30), interpolation=cv2.INTER_AREA)
+
+			# erode picture because dataset images are much thinner
+			eroded = cv2.morphologyEx(padded, cv2.MORPH_ERODE, np.ones(shape=(2, 2)), iterations=3)
+
+			# resize
+			resized = cv2.resize(eroded, (30, 30), interpolation=cv2.INTER_AREA)
 
 			# save cropped images
 			cropped_images.append(resized)

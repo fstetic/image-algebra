@@ -81,40 +81,8 @@ def get_integer_for_label(label):
 	:return: int
 		int representation of that label
 	"""
-	if label == "0":
-		return 0
-	elif label == "1":
-		return 1
-	elif label == "2":
-		return 2
-	elif label == "3":
-		return 3
-	elif label == "4":
-		return 4
-	elif label == "5":
-		return 5
-	elif label == "6":
-		return 6
-	elif label == "7":
-		return 7
-	elif label == "8":
-		return 8
-	elif label == "9":
-		return 9
-	elif label == "+":
-		return 10
-	elif label == "-":
-		return 11
-	elif label == "div":
-		return 12
-	elif label == "times":
-		return 13
-	elif label == "(":
-		return 14
-	elif label == ")":
-		return 15
-	else:
-		return
+	labels = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '-', 'div', 'times', '(', ')']
+	return labels.index(label)
 
 
 def get_label_for_integer(integer):
@@ -124,40 +92,8 @@ def get_label_for_integer(integer):
 	:return: string
 		label
 	"""
-	if integer == 0:
-		return "0"
-	elif integer == 1:
-		return "1"
-	elif integer == 2:
-		return "2"
-	elif integer == 3:
-		return "3"
-	elif integer == 4:
-		return "4"
-	elif integer == 5:
-		return "5"
-	elif integer == 6:
-		return "6"
-	elif integer == 7:
-		return "7"
-	elif integer == 8:
-		return "8"
-	elif integer == 9:
-		return "9"
-	elif integer == 10:
-		return "+"
-	elif integer == 11:
-		return "-"
-	elif integer == 12:
-		return "/"
-	elif integer == 13:
-		return "*"
-	elif integer == 14:
-		return "("
-	elif integer == 15:
-		return ")"
-	else:
-		return
+	labels = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '+', '-', '/', '*', '(', ')']
+	return labels[integer]
 
 
 def train():
